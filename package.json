@@ -1,0 +1,14 @@
+{
+  "name": "testbed",
+  "version": "0.0.1",
+  "description": "A testbed for IoT tech.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fred Block",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.10.2"
+  }
+}
