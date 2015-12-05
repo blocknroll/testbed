@@ -10,6 +10,18 @@
 
     <h1>i am a robot</h1>
 
+    <button id="stop" type="button" name="button-stop">STOP</button>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      var socket = io();
+
+      $('#stop').click(function () {
+        socket.emit('stop');
+      });
+    </script>
   </body>
 
 </html>
