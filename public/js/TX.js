@@ -1,42 +1,70 @@
 var socket = io();
 
+
 // TOP ROW ///////////////////////////////////////////////////////////////
-$('#turnLeft').click(function () {
-  socket.emit('turnLeft');
+$('#turnLeft').mousedown(function () {
+  socket.emit('turnLeft')
+});
+$('#turnLeft').mouseup(function () {
+  socket.emit('stop')
 });
 
-$('#forward').click(function () {
-  socket.emit('forward');
+$('#forward').mousedown(function () {
+  socket.emit('forward')
+});
+$('#forward').mouseup(function () {
+  socket.emit('stop')
 });
 
-$('#turnRight').click(function () {
-  socket.emit('turnRight');
+$('#turnRight').mousedown(function () {
+  socket.emit('turnRight')
+});
+$('#turnRight').mouseup(function () {
+  socket.emit('stop')
 });
 
 
 // MIDDLE ROW ///////////////////////////////////////////////////////////
-$('#spinLeft').click(function () {
-  socket.emit('spinLeft');
+$('#spinLeft').mousedown(function () {
+  socket.emit('spinLeft')
+});
+$('#spinLeft').mouseup(function () {
+  socket.emit('stop')
 });
 
-$('#stop').click(function () {
-  socket.emit('stop');
+$('#stop').mousedown(function () {
+  socket.emit('stop')
+});
+$('#stop').mouseup(function () {
+  socket.emit('stop')
 });
 
-$('#spinRight').click(function () {
-  socket.emit('spinRight');
+$('#spinRight').mousedown(function () {
+  socket.emit('spinRight')
+});
+$('#spinRight').mouseup(function () {
+  socket.emit('stop')
 });
 
 
 // BOTTOM ROW ///////////////////////////////////////////////////////////
-$('#reverseLeft').click(function () {
-  socket.emit('reverseLeft');
+$('#reverseLeft').mousedown(function () {
+  socket.emit('reverseLeft')
+});
+$('#reverseLeft').mouseup(function () {
+  socket.emit('stop')
 });
 
-$('#reverse').click(function () {
-  socket.emit('reverse');
+$('#reverse').mousedown(function () {
+  socket.emit('reverse')
+});
+$('#reverse').mouseup(function () {
+  socket.emit('stop')
 });
 
-$('#reverseRight').click(function () {
-  socket.emit('reverseRight');
+$('#reverseRight').mousedown(function () {
+  socket.emit('reverseRight')
+});
+$('#reverseRight').mouseup(function () {
+  socket.emit('stop')
 });

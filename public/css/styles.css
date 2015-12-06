@@ -14,6 +14,8 @@ body {
 
 h1 {
   color: green;
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  font-size: 2em;
 }
 
 .white-stripe {
@@ -30,4 +32,100 @@ h1 {
 #button-box {
   padding: 60px 0;
   text-align: center;
+}
+
+.button-directions img {
+  width: 50px;
+  margin: 4px;
+}
+
+/* top row ****************************/
+#turnLeft {
+  display: inline-block;
+}
+
+#turnLeft img {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+#forward {
+  display: inline-block;
+}
+
+#turnRight {
+  display: inline-block;
+}
+
+/* middle row ****************************/
+#spinLeft {
+  display: inline-block;
+}
+
+#spinLeft img {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+#center {
+  display: inline-block;
+}
+
+#center img {
+  opacity: 0;
+}
+
+#spinRight {
+  display: inline-block;
+}
+
+#spinRight img {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* bottom row ****************************/
+#reverseLeft {
+  display: inline-block;
+}
+
+#reverseLeft img {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#reverse {
+  display: inline-block;
+}
+
+#reverse img {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#reverseRight {
+  display: inline-block;
+}
+
+#reverseRight img {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
