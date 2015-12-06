@@ -3,6 +3,9 @@ const express = require('express');
 const app     = express();
 const server  = http.createServer(app);
 const io      = require('socket.io')(server);
+const five    = require('johnny-five');
+const board   = new five.Board();
+motors        = {};
 
 
 
@@ -14,8 +17,31 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
-server.listen(3000, function () {
-  console.log('listening on localhost:3000');
+server.listen(5000, function () {
+  console.log('listening on localhost:5000');
+});
+
+
+
+// JOHNNY-FIVE BOARD SETUP ////////////////////////////////////////////////////
+
+board.on('ready', function () {
+  motors = {
+    left: new five.Motor({
+      pins: {
+        pwm: 3,
+        dir: 12
+      },
+      invertPWM: true
+    }),
+    right: new five.Motor({
+      pins: {
+        pwm: 5,
+        dir: 8
+      },
+      invertPWM: true
+    })
+  };
 });
 
 
@@ -30,8 +56,27 @@ io.on('connection', function (socket) {
   });
 
   socket.on('stop', function () {
-    // stop();
+    stop();
     console.log('stop');
   });
 
+  socket.on('forward', function () {
+    forward();
+    console.log('forward');
+  });
+
 });
+
+
+
+// MOTOR FUNCTIONS ////////////////////////////////////////////////////////////
+
+var stop = function () {
+  motors.left.stop();
+  motors.right.stop();
+};
+
+var forward = function (speed) {
+  motors.left.forward(speed);
+  motors.right.reverse(speed);
+};

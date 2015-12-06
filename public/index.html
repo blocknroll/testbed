@@ -11,7 +11,7 @@
     <h1>i am a robot</h1>
 
     <button id="stop" type="button" name="button-stop">STOP</button>
-
+    <button id="forward" type="button" name="button-forward">FORWARD</button>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
@@ -20,6 +20,10 @@
 
       $('#stop').click(function () {
         socket.emit('stop');
+      });
+
+      $('#forward').click(function () {
+        socket.emit('forward');
       });
     </script>
   </body>
