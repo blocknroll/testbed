@@ -1,0 +1,33 @@
+body {
+  background-color: rgba(0, 0, 0, 1);;
+  margin: 0;
+}
+
+.top {
+  background-color: rgba(57, 57, 57, 1);
+}
+
+.logo {
+  padding: 60px 0;
+  text-align: center;
+}
+
+h1 {
+  color: green;
+}
+
+.white-stripe {
+  background-color: white;
+  height: 4px;
+}
+
+
+
+
+
+/* BUTTONS ****************************************************/
+
+#button-box {
+  padding: 60px 0;
+  text-align: center;
+}
