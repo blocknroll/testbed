@@ -55,28 +55,110 @@ io.on('connection', function (socket) {
     console.log('a user disconnected');
   });
 
+
+  // TOP ROW ////////////////////////////////////
+  socket.on('turnLeft', function () {
+    turnLeft(255);
+    console.log('turnLeft');
+  });
+
+  socket.on('forward', function () {
+    forward(255);
+    console.log('forward');
+  });
+
+  socket.on('turnRight', function () {
+    turnRight(255);
+    console.log('turnRight');
+  });
+
+
+  // MIDDLE ROW ////////////////////////////////////
+  socket.on('spinLeft', function () {
+    spinLeft(255);
+    console.log('spinLeft');
+  });
+
   socket.on('stop', function () {
     stop();
     console.log('stop');
   });
 
-  socket.on('forward', function () {
-    forward();
-    console.log('forward');
+  socket.on('spinRight', function () {
+    spinRight(255);
+    console.log('spinRight');
   });
+
+
+  // BOTTOM ROW ////////////////////////////////////
+  socket.on('reverseLeft', function () {
+    reverseLeft(255);
+    console.log('reverseLeft');
+  });
+
+  socket.on('reverse', function () {
+    reverse(255);
+    console.log('reverse');
+  });
+
+  socket.on('reverseRight', function () {
+    reverseRight(255);
+    console.log('reverseRight');
+  });
+
 
 });
 
 
 
-// MOTOR FUNCTIONS ////////////////////////////////////////////////////////////
+// MOTOR FUNCTIONS – EVENT HANDLERS ///////////////////////////////////////////
+
+// TOP ROW ////////////////////////////////////
+var turnLeft = function (speed) {
+  motors.left.forward(speed*0.5);
+  motors.right.reverse(speed);
+};
+
+var forward = function (speed) {
+  motors.left.forward(speed);
+  motors.right.reverse(speed);
+};
+
+var turnRight = function (speed) {
+  motors.left.forward(speed);
+  motors.right.reverse(speed*0.5);
+};
+
+
+// MIDDLE ROW ////////////////////////////////////
+var spinLeft = function (speed) {
+  motors.left.reverse(speed);
+  motors.right.reverse(speed);
+};
 
 var stop = function () {
   motors.left.stop();
   motors.right.stop();
 };
 
-var forward = function (speed) {
+var spinRight = function (speed) {
   motors.left.forward(speed);
-  motors.right.reverse(speed);
+  motors.right.forward(speed);
+};
+
+
+// BOTTOM ROW ////////////////////////////////////
+var reverseLeft = function (speed) {
+  motors.left.reverse(speed*0.5);
+  motors.right.forward(speed);
+};
+
+var reverse = function (speed) {
+  motors.left.reverse(speed);
+  motors.right.forward(speed);
+};
+
+var reverseRight = function (speed) {
+  motors.left.reverse(speed);
+  motors.right.forward(speed*0.5);
 };

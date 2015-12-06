@@ -10,22 +10,35 @@
 
     <h1>i am a robot</h1>
 
-    <button id="stop" type="button" name="button-stop">STOP</button>
-    <button id="forward" type="button" name="button-forward">FORWARD</button>
 
+    <!-- BUTTONS ----------------------------------------------------------->
+
+    <div class="button-directions">
+      <button id="turnLeft" type="button">TURN L</button>
+      <button id="forward" type="button">FORWARD</button>
+      <button id="turnRight" type="button">TURN R</button>
+    </div>
+
+    <div class="button-directions">
+      <button id="spinLeft" type="button">SPIN L</button>
+      <button id="stop" type="button">STOP</button>
+      <button id="spinRight" type="button">SPIN R</button>
+    </div>
+
+    <div class="button-directions">
+      <button id="reverseLeft" type="button">REVERSE L</button>
+      <button id="reverse" type="button">REVERSE</button>
+      <button id="reverseRight" type="button">REVERSE R</button>
+    </div>
+
+
+
+
+    <!-- SCRIPTS ----------------------------------------------------------->
     <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-      var socket = io();
+    <script type="text/javascript" src="js/TX.js"></script>
 
-      $('#stop').click(function () {
-        socket.emit('stop');
-      });
-
-      $('#forward').click(function () {
-        socket.emit('forward');
-      });
-    </script>
   </body>
 
 </html>
