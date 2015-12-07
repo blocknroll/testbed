@@ -2,69 +2,62 @@ var socket = io();
 
 
 // TOP ROW ///////////////////////////////////////////////////////////////
-$('#turnLeft').mousedown(function () {
+$('#turnLeft').bind('touchstart mousedown', function () {
   socket.emit('turnLeft')
 });
-$('#turnLeft').mouseup(function () {
+$('#turnLeft').bind('touchend mouseup', function () {
   socket.emit('stop')
 });
 
-$('#forward').mousedown(function () {
+$('#forward').bind('touchstart mousedown', function () {
   socket.emit('forward')
 });
-$('#forward').mouseup(function () {
+$('#forward').bind('touchend mouseup', function () {
   socket.emit('stop')
 });
 
-$('#turnRight').mousedown(function () {
+$('#turnRight').bind('touchstart mousedown', function () {
   socket.emit('turnRight')
 });
-$('#turnRight').mouseup(function () {
+$('#turnRight').bind('touchend mouseup', function () {
   socket.emit('stop')
 });
 
 
 // MIDDLE ROW ///////////////////////////////////////////////////////////
-$('#spinLeft').mousedown(function () {
+$('#spinLeft').bind('touchstart mousedown', function () {
   socket.emit('spinLeft')
 });
-$('#spinLeft').mouseup(function () {
+$('#spinLeft').bind('touchend mouseup', function () {
   socket.emit('stop')
 });
 
-$('#stop').mousedown(function () {
-  socket.emit('stop')
-});
-$('#stop').mouseup(function () {
-  socket.emit('stop')
-});
-
-$('#spinRight').mousedown(function () {
+$('#spinRight').bind('touchstart mousedown', function () {
   socket.emit('spinRight')
 });
-$('#spinRight').mouseup(function () {
+$('#spinRight').bind('touchend mouseup', function () {
   socket.emit('stop')
 });
 
 
 // BOTTOM ROW ///////////////////////////////////////////////////////////
-$('#reverseLeft').mousedown(function () {
+$('#reverseLeft').bind('touchstart mousedown', function () {
   socket.emit('reverseLeft')
 });
-$('#reverseLeft').mouseup(function () {
+$('#reverseLeft').bind('touchend mouseup', function () {
   socket.emit('stop')
 });
 
-$('#reverse').mousedown(function () {
+$('#reverse').bind('touchstart mousedown', function () {
   socket.emit('reverse')
 });
-$('#reverse').mouseup(function () {
+$('#reverse').bind('touchend mouseup', function () {
   socket.emit('stop')
 });
 
-$('#reverseRight').mousedown(function () {
+$('#reverseRight').bind('touchstart mousedown', function () {
   socket.emit('reverseRight')
 });
-$('#reverseRight').mouseup(function () {
+$('#reverseRight').bind('touchend mouseup', function () {
   socket.emit('stop')
 });
