@@ -2,33 +2,66 @@
 <html>
 
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>testbed</title>
+
+    <link rel="stylesheet" href="css/styles.css" media="screen">
   </head>
+
 
   <body>
 
-    <h1>i am a robot</h1>
+    <section class="top">
+      <div class="logo">
+        <h1>T3STB3D</h1>
+      </div>
+    </section>
+
+    <section class="white-stripe"></section>
 
 
-    <!-- BUTTONS ----------------------------------------------------------->
 
-    <div class="button-directions">
-      <button id="turnLeft" type="button">TURN L</button>
-      <button id="forward" type="button">FORWARD</button>
-      <button id="turnRight" type="button">TURN R</button>
-    </div>
+    <!-- BUTTONS -------------------------------------------------->
+    <div id="button-box">
 
-    <div class="button-directions">
-      <button id="spinLeft" type="button">SPIN L</button>
-      <button id="stop" type="button">STOP</button>
-      <button id="spinRight" type="button">SPIN R</button>
-    </div>
+      <div class="button-directions">
+        <div id="turnLeft">
+          <img src="img/button-square-45.svg" alt="turnLeft" />
+        </div>
+        <div id="forward">
+          <img src="img/button-square-90.svg" style="pointer-events:none" alt="forward" />
+        </div>
+        <div id="turnRight">
+          <img src="img/button-square-45.svg" alt="turnRight" />
+        </div>
+      </div>
 
-    <div class="button-directions">
-      <button id="reverseLeft" type="button">REVERSE L</button>
-      <button id="reverse" type="button">REVERSE</button>
-      <button id="reverseRight" type="button">REVERSE R</button>
+      <div class="button-directions">
+        <div id="spinLeft">
+          <img src="img/button-square-90.svg" alt="spinLeft" />
+        </div>
+        <div id="center">
+          <img src="img/button-square-90.svg" alt="center" />
+        </div>
+        <div id="spinRight">
+          <img src="img/button-square-90.svg" alt="spinRight" />
+        </div>
+      </div>
+
+      <div class="button-directions">
+        <div id="reverseLeft">
+          <img src="img/button-square-45.svg" alt="reverseLeft" />
+        </div>
+        <div id="reverse">
+          <img src="img/button-square-90.svg" alt="reverse" />
+        </div>
+        <div id="reverseRight">
+          <img src="img/button-square-45.svg" alt="reverseRight" />
+        </div>
+      </div>
+
     </div>
 
 
