@@ -10,10 +10,19 @@ $('#turnLeft').bind('touchend mouseup', function () {
 });
 
 $('#forward').bind('touchstart mousedown', function () {
-  socket.emit('forward')
+  socket.emit('forward');
+  $('.button-square').css({ fill: 'rgba(224, 49, 29, 1)' })
+  $('#logo-box').css({ backgroundColor: 'rgba(34, 34, 34, 0.1)' })  // background darker
+  // $('#logo-box').css({ backgroundColor: 'rgba(255, 243, 33, 1)' })  // background to yellow
+  // $('#logo-box').css({ borderColor: 'rgba(255, 243, 33, 1)' })
+  // $('#logo-box').css({ borderColor: 'rgba(34, 34, 34, 1)' })
+
 });
 $('#forward').bind('touchend mouseup', function () {
-  socket.emit('stop')
+  socket.emit('stop');
+  $('.button-square').css({ fill: 'rgba(255, 243, 33, 1)' });
+  $('#logo-box').css({ backgroundColor: 'rgba(224, 49, 29, 1)' })  // background to red
+  // $('#logo-box').css({ borderColor: 'white' })
 });
 
 $('#turnRight').bind('touchstart mousedown', function () {

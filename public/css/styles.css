@@ -5,15 +5,23 @@ body {
 
 .top {
   background-color: rgba(224, 49, 29, 1);
+  padding: 40px;
 }
 
-.logo {
-  padding: 40px 0;
+#logo-box {
+  margin: 0 auto;
+  width: 194px;
+  height: 194px;
   text-align: center;
+  background-color: none;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white;
 }
 
-.logo img {
-  width: 206px;
+#logo-box img {
+  width: 150px;
+  margin-top: 21px;
 }
 
 h1 {
@@ -44,6 +52,16 @@ h1 {
   width: 54px;
   margin: 8px;
 }
+
+.button-90 {
+  margin: 8px;
+}
+
+.button-90 .button-square {
+  fill: rgb(255, 243, 33);
+}
+
+
 
 /* top row ****************************/
 #turnLeft {

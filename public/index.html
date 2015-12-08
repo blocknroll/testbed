@@ -14,7 +14,7 @@
   <body>
 
     <section class="top">
-      <div class="logo">
+      <div id="logo-box">
         <img src="img/logo.svg" alt="Testa Rossa Boxer" />
       </div>
     </section>
@@ -30,9 +30,19 @@
         <div id="turnLeft">
           <img src="img/button-square-45.svg" alt="turnLeft" />
         </div>
+
         <div id="forward">
-          <img src="img/button-square-90.svg" style="pointer-events:none" alt="forward" />
+          <svg class="button-90" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 100 100">
+            <path class="button-arrow" fill="none" stroke="#1A1A1A" stroke-width="5" stroke-miterlimit="10" d="M-438.5-19.5h52v52h-52zM-438.5-61v-52.5h51.5"/>
+            <path class="button-square" d="M0 0v100h100V0H0zm5.572 69l44.39-44.39L94.352 69H5.572z"/>
+          </svg>
         </div>
+        <!-- <path id="path1" fill="#FFFFFF" stroke="#231F20" stroke-miterlimit="10" d="M291.451,51.919v202.54c0,0,164.521,119.846,140.146,0
+    C407.227,134.613,291.451,51.919,291.451,51.919z"/> -->
+
+        <!-- <div id="forward">
+          <img src="img/button-square-90.svg" style="pointer-events:none" alt="forward" />
+        </div> -->
         <div id="turnRight">
           <img src="img/button-square-45.svg" alt="turnRight" />
         </div>
