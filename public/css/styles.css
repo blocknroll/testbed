@@ -1,15 +1,19 @@
 body {
-  background-color: rgba(0, 0, 0, 1);;
+  background-color: rgba(34, 34, 34, 1);
   margin: 0;
 }
 
 .top {
-  background-color: rgba(57, 57, 57, 1);
+  background-color: rgba(224, 49, 29, 1);
 }
 
 .logo {
-  padding: 60px 0;
+  padding: 40px 0;
   text-align: center;
+}
+
+.logo img {
+  width: 206px;
 }
 
 h1 {
@@ -20,7 +24,7 @@ h1 {
 
 .white-stripe {
   background-color: white;
-  height: 4px;
+  height: 5px;
 }
 
 
@@ -30,15 +34,15 @@ h1 {
 /* BUTTONS ****************************************************/
 
 #button-box {
-  padding: 60px 0;
+  padding: 40px 0;
   text-align: center;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
 }
 
 .button-directions img {
-  width: 50px;
-  margin: 4px;
+  width: 54px;
+  margin: 8px;
 }
 
 /* top row ****************************/
