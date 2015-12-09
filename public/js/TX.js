@@ -2,50 +2,76 @@ var socket = io();
 
 
 // TOP ROW ///////////////////////////////////////////////////////////////
+
+// TURN LEFT //
 $('#turnLeft').bind('touchstart mousedown', function () {
   socket.emit('turnLeft')
+  $('.turnLeft-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })  // darker red
+  $('.turnLeft-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })   // white
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 $('#turnLeft').bind('touchend mouseup', function () {
   socket.emit('stop')
+  $('.turnLeft-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })  // gold
+  $('.turnLeft-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })      // charcoal
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 });
 
+// FORWARD //
 $('#forward').bind('touchstart mousedown', function () {
   socket.emit('forward');
-  $('.button-square').css({ fill: 'rgba(224, 49, 29, 1)' })
-  $('#logo-box').css({ backgroundColor: 'rgba(34, 34, 34, 0.1)' })  // background darker
-  // $('#logo-box').css({ backgroundColor: 'rgba(255, 243, 33, 1)' })  // background to yellow
-  // $('#logo-box').css({ borderColor: 'rgba(255, 243, 33, 1)' })
-  // $('#logo-box').css({ borderColor: 'rgba(34, 34, 34, 1)' })
-
+  $('.forward-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })  // darker red
+  $('.forward-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })   // white
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 $('#forward').bind('touchend mouseup', function () {
   socket.emit('stop');
-  $('.button-square').css({ fill: 'rgba(255, 243, 33, 1)' });
-  $('#logo-box').css({ backgroundColor: 'rgba(224, 49, 29, 1)' })  // background to red
-  // $('#logo-box').css({ borderColor: 'white' })
+  $('.forward-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })  // gold
+  $('.forward-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })      // charcoal
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 });
 
+// TURN RIGHT //
 $('#turnRight').bind('touchstart mousedown', function () {
   socket.emit('turnRight')
+  $('.turnRight-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })  // darker red
+  $('.turnRight-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })   // white
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 $('#turnRight').bind('touchend mouseup', function () {
   socket.emit('stop')
+  $('.turnRight-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })  // gold
+  $('.turnRight-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })      // charcoal
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 });
+
 
 
 // MIDDLE ROW ///////////////////////////////////////////////////////////
 $('#spinLeft').bind('touchstart mousedown', function () {
   socket.emit('spinLeft')
+  $('.spinLeft-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })  // darker red
+  $('.spinLeft-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })   // white
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 $('#spinLeft').bind('touchend mouseup', function () {
   socket.emit('stop')
+  $('.spinLeft-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })  // gold
+  $('.spinLeft-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })      // charcoal
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 });
 
 $('#spinRight').bind('touchstart mousedown', function () {
   socket.emit('spinRight')
+  $('.spinRight-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })  // darker red
+  $('.spinRight-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })   // white
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 $('#spinRight').bind('touchend mouseup', function () {
   socket.emit('stop')
+  $('.spinRight-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })  // gold
+  $('.spinRight-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })      // charcoal
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 });
 
 

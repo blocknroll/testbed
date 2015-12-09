@@ -1,10 +1,12 @@
 body {
-  background-color: rgba(34, 34, 34, 1);
+  background-color: hsla(0, 0%, 13%, 1);
+  /*background-color: rgba(34, 34, 34, 1);*/
   margin: 0;
 }
 
 .top {
-  background-color: rgba(224, 49, 29, 1);
+  background-color: hsla(6, 77%, 50%, 1);
+  /*background-color: rgba(224, 49, 29, 1);*/
   padding: 40px;
 }
 
@@ -53,13 +55,38 @@ h1 {
   margin: 8px;
 }
 
-.button-90 {
+.button-90,
+.button-45,
+.button {
   margin: 8px;
 }
 
-.button-90 .button-square {
-  fill: rgb(255, 243, 33);
+/*.button-90 .button-square {
+  fill: hsla(57, 100%, 56%, 1);
 }
+
+.button-90 .button-arrow {
+  fill: hsla(0, 0%, 13%, 1);
+}*/
+
+.button
+.turnLeft-square,
+.forward-square,
+.turnRight-square,
+.spinLeft-square,
+.spinRight-square  {
+  fill: hsla(57, 100%, 56%, 1);
+}
+
+.button
+.turnLeft-arrow,
+.forward-arrow,
+.turnRight-arrow,
+.spinLeft-arrow,
+.spinRight-arrow  {
+  fill: hsla(0, 0%, 13%, 1);
+}
+
 
 
 
@@ -68,7 +95,7 @@ h1 {
   display: inline-block;
 }
 
-#turnLeft img {
+#turnLeft svg {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -89,7 +116,7 @@ h1 {
   display: inline-block;
 }
 
-#spinLeft img {
+#spinLeft svg {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -109,7 +136,7 @@ h1 {
   display: inline-block;
 }
 
-#spinRight img {
+#spinRight svg {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -134,7 +161,7 @@ h1 {
   display: inline-block;
 }
 
-#reverse img {
+#reverse svg {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);

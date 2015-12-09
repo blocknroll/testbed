@@ -5,5 +5,11 @@
 	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 <rect x="-438.5" y="-19.5" fill="none" stroke="#1A1A1A" stroke-width="5" stroke-miterlimit="10" width="52" height="52"/>
 <polyline fill="none" stroke="#1A1A1A" stroke-width="5" stroke-miterlimit="10" points="-438.5,-61 -438.5,-113.5 -387,-113.5 "/>
-<path fill="#FFF321" d="M0,0v100h100V0H0z M76,86.389L13.574,24H76V86.389z"/>
+<rect x="-206" fill="#FFF321" width="100" height="100"/>
+<polygon fill="#1A1A1A" points="-200.428,69 -156.038,24.61 -111.648,69 "/>
+<polygon fill="#1A1A1A" points="-175,35.572 -130.61,79.962 -175,124.352 "/>
+<polygon fill="#1A1A1A" points="-192.426,24 -130,24 -130,86.389 "/>
+<rect fill="#FFF321" width="100" height="100"/>
+<polygon fill="#1A1A1A" points="13.574,24 76,24 76,86.389 "/>
+<path fill="#FFF321" d="M-206-115v100h100v-100H-206z M-200.428-46l44.39-44.39l44.39,44.39H-200.428z"/>
 </svg>
