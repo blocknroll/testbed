@@ -115,18 +115,18 @@ io.on('connection', function (socket) {
 
 // TOP ROW ////////////////////////////////////
 var turnLeft = function (speed) {
-  motors.left.forward(speed*0.5);
+  motors.left.forward(speed * 0.5);
   motors.right.reverse(speed);
 };
 
 var forward = function (speed) {
   motors.left.forward(speed);
-  motors.right.reverse(speed);
+  motors.right.reverse(speed - 21);
 };
 
 var turnRight = function (speed) {
   motors.left.forward(speed);
-  motors.right.reverse(speed*0.5);
+  motors.right.reverse(speed * 0.5);
 };
 
 
@@ -149,16 +149,16 @@ var spinRight = function (speed) {
 
 // BOTTOM ROW ////////////////////////////////////
 var reverseLeft = function (speed) {
-  motors.left.reverse(speed*0.5);
+  motors.left.reverse(speed * 0.5);
   motors.right.forward(speed);
 };
 
 var reverse = function (speed) {
   motors.left.reverse(speed);
-  motors.right.forward(speed);
+  motors.right.forward(speed - 21);
 };
 
 var reverseRight = function (speed) {
   motors.left.reverse(speed);
-  motors.right.forward(speed*0.5);
+  motors.right.forward(speed * 0.5);
 };
