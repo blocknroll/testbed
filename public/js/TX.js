@@ -78,21 +78,39 @@ $('#spinRight').bind('touchend mouseup', function () {
 // BOTTOM ROW ///////////////////////////////////////////////////////////
 $('#reverseLeft').bind('touchstart mousedown', function () {
   socket.emit('reverseLeft')
+  $('.reverseLeft-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })  // darker red
+  $('.reverseLeft-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })   // white
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 $('#reverseLeft').bind('touchend mouseup', function () {
   socket.emit('stop')
+  $('.reverseLeft-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })  // gold
+  $('.reverseLeft-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })      // charcoal
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 });
 
 $('#reverse').bind('touchstart mousedown', function () {
   socket.emit('reverse')
+  $('.reverse-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })  // darker red
+  $('.reverse-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })   // white
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 $('#reverse').bind('touchend mouseup', function () {
   socket.emit('stop')
+  $('.reverse-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })  // gold
+  $('.reverse-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })      // charcoal
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 });
 
 $('#reverseRight').bind('touchstart mousedown', function () {
   socket.emit('reverseRight')
+  $('.reverseRight-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })  // darker red
+  $('.reverseRight-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })   // white
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 $('#reverseRight').bind('touchend mouseup', function () {
   socket.emit('stop')
+  $('.reverseRight-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })  // gold
+  $('.reverseRight-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })      // charcoal
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 });

@@ -50,31 +50,19 @@ h1 {
   -webkit-touch-callout: none;
 }
 
-.button-directions img {
-  width: 54px;
-  margin: 8px;
-}
-
-.button-90,
-.button-45,
 .button {
   margin: 8px;
 }
-
-/*.button-90 .button-square {
-  fill: hsla(57, 100%, 56%, 1);
-}
-
-.button-90 .button-arrow {
-  fill: hsla(0, 0%, 13%, 1);
-}*/
 
 .button
 .turnLeft-square,
 .forward-square,
 .turnRight-square,
 .spinLeft-square,
-.spinRight-square  {
+.spinRight-square,
+.reverseLeft-square,
+.reverse-square,
+.reverseRight-square  {
   fill: hsla(57, 100%, 56%, 1);
 }
 
@@ -83,7 +71,10 @@ h1 {
 .forward-arrow,
 .turnRight-arrow,
 .spinLeft-arrow,
-.spinRight-arrow  {
+.spinRight-arrow,
+.reverseLeft-arrow,
+.reverse-arrow,
+.reverseRight-arrow  {
   fill: hsla(0, 0%, 13%, 1);
 }
 
@@ -128,7 +119,7 @@ h1 {
   display: inline-block;
 }
 
-#center img {
+#center svg {
   opacity: 0;
 }
 
@@ -149,7 +140,7 @@ h1 {
   display: inline-block;
 }
 
-#reverseLeft img {
+#reverseLeft svg {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -173,7 +164,7 @@ h1 {
   display: inline-block;
 }
 
-#reverseRight img {
+#reverseRight svg {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
