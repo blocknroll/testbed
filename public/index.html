@@ -5,7 +5,7 @@
     <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>testbed</title>
+    <title>Testa Rossa Boxer</title>
 
     <link rel="stylesheet" href="css/styles.css" media="screen">
   </head>
@@ -14,9 +14,15 @@
   <body>
 
     <section class="top">
-      <div class="logo">
-        <h1>T3STB3D</h1>
+
+      <div id="logo-box">
+        <img src="img/logo.svg" alt="Testa Rossa Boxer" />
+        <!-- <div id="logo-text">
+          <h1>Red</h1>
+          <h1>bot</h1>
+        </div> -->
       </div>
+
     </section>
 
     <section class="white-stripe"></section>
@@ -26,40 +32,123 @@
     <!-- BUTTONS -------------------------------------------------->
     <div id="button-box">
 
+      <!-- TOP ROW -->
       <div class="button-directions">
+
         <div id="turnLeft">
-          <img src="img/button-square-45.svg" alt="turnLeft" />
+          <svg class="button" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 100 100">
+            <path class="turnLeft-arrow"  d="M-438.5-19.5h52v52h-52zM-438.5-61v-52.5h51.5"/>
+            <path class="turnLeft-square" d="M-206 0h100v100h-100z"/>
+            <path class="turnLeft-arrow"  d="M-200.428 69l44.39-44.39 44.39 44.39"/>
+            <path class="turnLeft-arrow"  d="M-175 35.572l44.39 44.39-44.39 44.39"/>
+            <path class="turnLeft-arrow"  d="M-192.426 24H-130v62.39"/>
+            <path class="turnLeft-square" d="M0 0h100v100H0z"/>
+            <path class="turnLeft-arrow"  d="M13.574 24H76v62.39"/>
+            <path class="turnLeft-square" d="M-206-115v100h100v-100h-100zm5.572 69l44.39-44.39 44.39 44.39h-88.78z"/>
+          </svg>
         </div>
+
         <div id="forward">
-          <img src="img/button-square-90.svg" style="pointer-events:none" alt="forward" />
+          <svg class="button" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 100 100">
+            <path class="forward-arrow"  d="M-438.5-19.5h52v52h-52zM-438.5-61v-52.5h51.5"/>
+            <path class="forward-square" d="M-180 0h100v100h-100z"/>
+            <path class="forward-arrow"  d="M-174.428 69l44.39-44.39L-85.648 69"/>
+            <path class="forward-square" d="M0 0h100v100H0z"/>
+            <path class="forward-arrow"  d="M5.572 69l44.39-44.39L94.352 69"/>
+          </svg>
         </div>
+
         <div id="turnRight">
-          <img src="img/button-square-45.svg" alt="turnRight" />
+          <svg class="button" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 100 100">
+            <path class="turnRight-arrow"  d="M-438.5-19.5h52v52h-52zM-438.5-61v-52.5h51.5"/>
+            <path class="turnRight-square" d="M-206 0h100v100h-100z"/>
+            <path class="turnRight-arrow"  d="M-200.428 69l44.39-44.39 44.39 44.39"/>
+            <path class="turnRight-arrow"  d="M-175 35.572l44.39 44.39-44.39 44.39"/>
+            <path class="turnRight-arrow"  d="M-192.426 24H-130v62.39"/>
+            <path class="turnRight-square" d="M0 0h100v100H0z"/>
+            <path class="turnRight-arrow"  d="M13.574 24H76v62.39"/>
+            <path class="turnRight-square" d="M-206-115v100h100v-100h-100zm5.572 69l44.39-44.39 44.39 44.39h-88.78z"/>
+          </svg>
         </div>
+
       </div>
 
+
+      <!-- MIDDLE ROW -->
       <div class="button-directions">
+
         <div id="spinLeft">
-          <img src="img/button-square-90.svg" alt="spinLeft" />
+          <svg class="button" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 100 100">
+            <path class="spinLeft-arrow"  d="M-438.5-19.5h52v52h-52zM-438.5-61v-52.5h51.5"/>
+            <path class="spinLeft-square" d="M-180 0h100v100h-100z"/>
+            <path class="spinLeft-arrow"  d="M-174.428 69l44.39-44.39L-85.648 69"/>
+            <path class="spinLeft-square" d="M0 0h100v100H0z"/>
+            <path class="spinLeft-arrow"  d="M5.572 69l44.39-44.39L94.352 69"/>
+          </svg>
         </div>
+
         <div id="center">
-          <img src="img/button-square-90.svg" alt="center" />
+          <svg class="button" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 100 100">
+            <path class="center-arrow"  d="M-438.5-19.5h52v52h-52zM-438.5-61v-52.5h51.5"/>
+            <path class="center-square" d="M-180 0h100v100h-100z"/>
+            <path class="center-arrow"  d="M-174.428 69l44.39-44.39L-85.648 69"/>
+            <path class="center-square" d="M0 0h100v100H0z"/>
+            <path class="center-arrow"  d="M5.572 69l44.39-44.39L94.352 69"/>
+          </svg>
         </div>
+
         <div id="spinRight">
-          <img src="img/button-square-90.svg" alt="spinRight" />
+          <svg class="button" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 100 100">
+            <path class="spinRight-arrow"  d="M-438.5-19.5h52v52h-52zM-438.5-61v-52.5h51.5"/>
+            <path class="spinRight-square" d="M-180 0h100v100h-100z"/>
+            <path class="spinRight-arrow"  d="M-174.428 69l44.39-44.39L-85.648 69"/>
+            <path class="spinRight-square" d="M0 0h100v100H0z"/>
+            <path class="spinRight-arrow"  d="M5.572 69l44.39-44.39L94.352 69"/>
+          </svg>
         </div>
+
       </div>
 
+
+      <!-- BOTTOM ROW -->
       <div class="button-directions">
+
         <div id="reverseLeft">
-          <img src="img/button-square-45.svg" alt="reverseLeft" />
+          <svg class="button" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 100 100">
+            <path class="reverseLeft-arrow"  d="M-438.5-19.5h52v52h-52zM-438.5-61v-52.5h51.5"/>
+            <path class="reverseLeft-square" d="M-206 0h100v100h-100z"/>
+            <path class="reverseLeft-arrow"  d="M-200.428 69l44.39-44.39 44.39 44.39"/>
+            <path class="reverseLeft-arrow"  d="M-175 35.572l44.39 44.39-44.39 44.39"/>
+            <path class="reverseLeft-arrow"  d="M-192.426 24H-130v62.39"/>
+            <path class="reverseLeft-square" d="M0 0h100v100H0z"/>
+            <path class="reverseLeft-arrow"  d="M13.574 24H76v62.39"/>
+            <path class="reverseLeft-square" d="M-206-115v100h100v-100h-100zm5.572 69l44.39-44.39 44.39 44.39h-88.78z"/>
+          </svg>
         </div>
+
         <div id="reverse">
-          <img src="img/button-square-90.svg" alt="reverse" />
+          <svg class="button" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 100 100">
+            <path class="reverse-arrow"  d="M-438.5-19.5h52v52h-52zM-438.5-61v-52.5h51.5"/>
+            <path class="reverse-square" d="M-180 0h100v100h-100z"/>
+            <path class="reverse-arrow"  d="M-174.428 69l44.39-44.39L-85.648 69"/>
+            <path class="reverse-square" d="M0 0h100v100H0z"/>
+            <path class="reverse-arrow"  d="M5.572 69l44.39-44.39L94.352 69"/>
+          </svg>
         </div>
+
         <div id="reverseRight">
-          <img src="img/button-square-45.svg" alt="reverseRight" />
+          <svg class="button" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 100 100">
+            <path class="reverseRight-arrow"  d="M-438.5-19.5h52v52h-52zM-438.5-61v-52.5h51.5"/>
+            <path class="reverseRight-square" d="M-206 0h100v100h-100z"/>
+            <path class="reverseRight-arrow"  d="M-200.428 69l44.39-44.39 44.39 44.39"/>
+            <path class="reverseRight-arrow"  d="M-175 35.572l44.39 44.39-44.39 44.39"/>
+            <path class="reverseRight-arrow"  d="M-192.426 24H-130v62.39"/>
+            <path class="reverseRight-square" d="M0 0h100v100H0z"/>
+            <path class="reverseRight-arrow"  d="M13.574 24H76v62.39"/>
+            <path class="reverseRight-square" d="M-206-115v100h100v-100h-100zm5.572 69l44.39-44.39 44.39 44.39h-88.78z"/>
+          </svg>
         </div>
+
       </div>
 
     </div>
