@@ -63,7 +63,7 @@ io.on('connection', function (socket) {
   // TOP ROW ////////////////////////////////////
   socket.on('turnLeft', function () {
     turnLeft(255);
-    io.emit('Rx-turnLeft');
+    io.emit('RX-turnLeft');
     ledRxOn();
     console.log('turnLeft');
   });
@@ -133,16 +133,6 @@ io.on('connection', function (socket) {
 
 
 
-// LED FUNCTIONS – EVENT HANDLERS ///////////////////////////////////////////
-var ledRxOn = function () {
-  ledRx.on();
-}
-
-var ledRxOff = function () {
-  ledRx.off();
-}
-
-
 
 
 
@@ -197,3 +187,15 @@ var reverseRight = function (speed) {
   motors.left.reverse(speed);
   motors.right.forward(speed * 0.5);
 };
+
+
+
+
+// LED FUNCTIONS – EVENT HANDLERS ///////////////////////////////////////////
+var ledRxOn = function () {
+  ledRx.on();
+}
+
+var ledRxOff = function () {
+  ledRx.off();
+}
