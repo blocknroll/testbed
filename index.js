@@ -26,6 +26,7 @@ server.listen(5000, function () {
 // JOHNNY-FIVE BOARD SETUP ////////////////////////////////////////////////////
 
 board.on('ready', function () {
+
   motors = {
     left: new five.Motor({
       pins: {
@@ -42,6 +43,9 @@ board.on('ready', function () {
       invertPWM: true
     })
   };
+
+  ledRx = new five.Led(13);
+
 });
 
 
@@ -59,16 +63,19 @@ io.on('connection', function (socket) {
   // TOP ROW ////////////////////////////////////
   socket.on('turnLeft', function () {
     turnLeft(255);
+    ledRxOn();
     console.log('turnLeft');
   });
 
   socket.on('forward', function () {
     forward(255);
+    ledRxOn();
     console.log('forward');
   });
 
   socket.on('turnRight', function () {
     turnRight(255);
+    ledRxOn();
     console.log('turnRight');
   });
 
@@ -76,16 +83,19 @@ io.on('connection', function (socket) {
   // MIDDLE ROW ////////////////////////////////////
   socket.on('spinLeft', function () {
     spinLeft(255);
+    ledRxOn();
     console.log('spinLeft');
   });
 
   socket.on('stop', function () {
     stop();
+    ledRxOff();
     console.log('stop');
   });
 
   socket.on('spinRight', function () {
     spinRight(255);
+    ledRxOn();
     console.log('spinRight');
   });
 
@@ -93,21 +103,37 @@ io.on('connection', function (socket) {
   // BOTTOM ROW ////////////////////////////////////
   socket.on('reverseLeft', function () {
     reverseLeft(255);
+    ledRxOn();
     console.log('reverseLeft');
   });
 
   socket.on('reverse', function () {
     reverse(255);
+    ledRxOn();
     console.log('reverse');
   });
 
   socket.on('reverseRight', function () {
     reverseRight(255);
+    ledRxOn();
     console.log('reverseRight');
   });
 
-
 });
+
+
+
+
+// LED FUNCTIONS – EVENT HANDLERS ///////////////////////////////////////////
+var ledRxOn = function () {
+  ledRx.on();
+}
+
+var ledRxOff = function () {
+  ledRx.off();
+}
+
+
 
 
 
