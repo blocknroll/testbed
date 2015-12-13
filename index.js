@@ -63,18 +63,21 @@ io.on('connection', function (socket) {
   // TOP ROW ////////////////////////////////////
   socket.on('turnLeft', function () {
     turnLeft(255);
+    io.emit('RxOn');
     ledRxOn();
     console.log('turnLeft');
   });
 
   socket.on('forward', function () {
     forward(255);
+    io.emit('RxOn');
     ledRxOn();
     console.log('forward');
   });
 
   socket.on('turnRight', function () {
     turnRight(255);
+    io.emit('RxOn');
     ledRxOn();
     console.log('turnRight');
   });
@@ -83,18 +86,21 @@ io.on('connection', function (socket) {
   // MIDDLE ROW ////////////////////////////////////
   socket.on('spinLeft', function () {
     spinLeft(255);
+    io.emit('RxOn');
     ledRxOn();
     console.log('spinLeft');
   });
 
   socket.on('stop', function () {
     stop();
+    io.emit('RxOff');
     ledRxOff();
     console.log('stop');
   });
 
   socket.on('spinRight', function () {
     spinRight(255);
+    io.emit('RxOn');
     ledRxOn();
     console.log('spinRight');
   });
@@ -103,18 +109,21 @@ io.on('connection', function (socket) {
   // BOTTOM ROW ////////////////////////////////////
   socket.on('reverseLeft', function () {
     reverseLeft(255);
+    io.emit('RxOn');
     ledRxOn();
     console.log('reverseLeft');
   });
 
   socket.on('reverse', function () {
     reverse(255);
+    io.emit('RxOn');
     ledRxOn();
     console.log('reverse');
   });
 
   socket.on('reverseRight', function () {
     reverseRight(255);
+    io.emit('RxOn');
     ledRxOn();
     console.log('reverseRight');
   });
