@@ -63,6 +63,7 @@ io.on('connection', function (socket) {
   // TOP ROW ////////////////////////////////////
   socket.on('TX-turnLeft', function () {
     turnLeft(255);
+    io.emit('RX-on');
     io.emit('RX-turnLeft');
     ledRxOn();
     console.log('RX-turnLeft');
@@ -70,6 +71,7 @@ io.on('connection', function (socket) {
 
   socket.on('TX-forward', function () {
     forward(255);
+    io.emit('RX-on');
     io.emit('RX-forward');
     ledRxOn();
     console.log('RX-forward');
@@ -77,6 +79,7 @@ io.on('connection', function (socket) {
 
   socket.on('TX-turnRight', function () {
     turnRight(255);
+    io.emit('RX-on');
     io.emit('RX-turnRight');
     ledRxOn();
     console.log('RX-turnRight');
@@ -86,6 +89,7 @@ io.on('connection', function (socket) {
   // MIDDLE ROW ////////////////////////////////////
   socket.on('TX-spinLeft', function () {
     spinLeft(255);
+    io.emit('RX-on');
     io.emit('RX-spinLeft');
     ledRxOn();
     console.log('RX-spinLeft');
@@ -93,6 +97,7 @@ io.on('connection', function (socket) {
 
   socket.on('TX-stop', function () {
     stop();
+    io.emit('RX-off');
     io.emit('RX-stop');
     ledRxOff();
     console.log('RX-stop');
@@ -100,6 +105,7 @@ io.on('connection', function (socket) {
 
   socket.on('TX-spinRight', function () {
     spinRight(255);
+    io.emit('RX-on');
     io.emit('RX-spinRight');
     ledRxOn();
     console.log('RX-spinRight');
@@ -109,6 +115,7 @@ io.on('connection', function (socket) {
   // BOTTOM ROW ////////////////////////////////////
   socket.on('TX-reverseLeft', function () {
     reverseLeft(255);
+    io.emit('RX-on');
     io.emit('RX-reverseLeft');
     ledRxOn();
     console.log('RX-reverseLeft');
@@ -116,6 +123,7 @@ io.on('connection', function (socket) {
 
   socket.on('TX-reverse', function () {
     reverse(255);
+    io.emit('RX-on');
     io.emit('RX-reverse');
     ledRxOn();
     console.log('RX-reverse');
@@ -123,6 +131,7 @@ io.on('connection', function (socket) {
 
   socket.on('TX-reverseRight', function () {
     reverseRight(255);
+    io.emit('RX-on');
     io.emit('RX-reverseRight');
     ledRxOn();
     console.log('RX-reverseRight');

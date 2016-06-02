@@ -2,32 +2,29 @@ var socket = io();
 
 // UI FEEDBACK ///////////////////////////////////////////////////////////////
 
-// LOGO //
-// socket.on('RxOn', function () {
-//   $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
-// });
-// socket.on('RxOff', function () {
-//   $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
-// });
+// LOGO ////////////////////////////////////
+socket.on('RX-on', function () {
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
+});
+socket.on('RX-off', function () {
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
+});
 
 
 // TOP ROW ////////////////////////////////////
 socket.on('RX-turnLeft', function () {
   $('.turnLeft-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })      // darker red
   $('.turnLeft-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })       // white
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 
 socket.on('RX-forward', function () {
   $('.forward-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })       // darker red
   $('.forward-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })        // white
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 
 socket.on('RX-turnRight', function () {
   $('.turnRight-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })     // darker red
   $('.turnRight-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })      // white
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 
 
@@ -35,12 +32,9 @@ socket.on('RX-turnRight', function () {
 socket.on('RX-spinLeft', function () {
   $('.spinLeft-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })      // darker red
   $('.spinLeft-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })       // white
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 
 socket.on('RX-stop', function () {
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
-
   $('.turnLeft-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })    // gold
   $('.turnLeft-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })        // charcoal
 
@@ -56,8 +50,8 @@ socket.on('RX-stop', function () {
   $('.spinRight-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })   // gold
   $('.spinRight-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })       // charcoal
 
-  $('.reverseLeft-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })  // gold
-  $('.reverseLeft-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })      // charcoal
+  $('.reverseLeft-square').css({ fill: 'hsla(57, 100%, 56%, 1)' }) // gold
+  $('.reverseLeft-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })     // charcoal
 
   $('.reverse-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })     // gold
   $('.reverse-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })         // charcoal
@@ -69,7 +63,6 @@ socket.on('RX-stop', function () {
 socket.on('RX-spinRight', function () {
   $('.spinRight-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })     // darker red
   $('.spinRight-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })      // white
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 
 
@@ -77,17 +70,14 @@ socket.on('RX-spinRight', function () {
 socket.on('RX-reverseLeft', function () {
   $('.reverseLeft-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })   // darker red
   $('.reverseLeft-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })    // white
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 
 socket.on('RX-reverse', function () {
   $('.reverse-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })       // darker red
   $('.reverse-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })        // white
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
 
 socket.on('RX-reverseRight', function () {
   $('.reverseRight-square').css({ fill: 'hsla(6, 77%, 42%, 1)' })  // darker red
   $('.reverseRight-arrow').css({ fill: 'hsla(0, 0%, 100%, 1)' })   // white
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 42%, 1)' })  // darker red
 });
