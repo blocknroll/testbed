@@ -61,77 +61,85 @@ io.on('connection', function (socket) {
 
 
   // TOP ROW ////////////////////////////////////
-  socket.on('turnLeft', function () {
+  socket.on('TX-turnLeft', function () {
     turnLeft(255);
+    io.emit('RX-on');
+    io.emit('RX-turnLeft');
     ledRxOn();
-    console.log('turnLeft');
+    console.log('RX-turnLeft');
   });
 
-  socket.on('forward', function () {
+  socket.on('TX-forward', function () {
     forward(255);
+    io.emit('RX-on');
+    io.emit('RX-forward');
     ledRxOn();
-    console.log('forward');
+    console.log('RX-forward');
   });
 
-  socket.on('turnRight', function () {
+  socket.on('TX-turnRight', function () {
     turnRight(255);
+    io.emit('RX-on');
+    io.emit('RX-turnRight');
     ledRxOn();
-    console.log('turnRight');
+    console.log('RX-turnRight');
   });
 
 
   // MIDDLE ROW ////////////////////////////////////
-  socket.on('spinLeft', function () {
+  socket.on('TX-spinLeft', function () {
     spinLeft(255);
+    io.emit('RX-on');
+    io.emit('RX-spinLeft');
     ledRxOn();
-    console.log('spinLeft');
+    console.log('RX-spinLeft');
   });
 
-  socket.on('stop', function () {
+  socket.on('TX-stop', function () {
     stop();
+    io.emit('RX-off');
+    io.emit('RX-stop');
     ledRxOff();
-    console.log('stop');
+    console.log('RX-stop');
   });
 
-  socket.on('spinRight', function () {
+  socket.on('TX-spinRight', function () {
     spinRight(255);
+    io.emit('RX-on');
+    io.emit('RX-spinRight');
     ledRxOn();
-    console.log('spinRight');
+    console.log('RX-spinRight');
   });
 
 
   // BOTTOM ROW ////////////////////////////////////
-  socket.on('reverseLeft', function () {
+  socket.on('TX-reverseLeft', function () {
     reverseLeft(255);
+    io.emit('RX-on');
+    io.emit('RX-reverseLeft');
     ledRxOn();
-    console.log('reverseLeft');
+    console.log('RX-reverseLeft');
   });
 
-  socket.on('reverse', function () {
+  socket.on('TX-reverse', function () {
     reverse(255);
+    io.emit('RX-on');
+    io.emit('RX-reverse');
     ledRxOn();
-    console.log('reverse');
+    console.log('RX-reverse');
   });
 
-  socket.on('reverseRight', function () {
+  socket.on('TX-reverseRight', function () {
     reverseRight(255);
+    io.emit('RX-on');
+    io.emit('RX-reverseRight');
     ledRxOn();
-    console.log('reverseRight');
+    console.log('RX-reverseRight');
   });
 
 });
 
 
-
-
-// LED FUNCTIONS – EVENT HANDLERS ///////////////////////////////////////////
-var ledRxOn = function () {
-  ledRx.on();
-}
-
-var ledRxOff = function () {
-  ledRx.off();
-}
 
 
 
@@ -188,3 +196,15 @@ var reverseRight = function (speed) {
   motors.left.reverse(speed);
   motors.right.forward(speed * 0.5);
 };
+
+
+
+
+// LED FUNCTIONS – EVENT HANDLERS ///////////////////////////////////////////
+var ledRxOn = function () {
+  ledRx.on();
+}
+
+var ledRxOff = function () {
+  ledRx.off();
+}

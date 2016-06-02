@@ -1,11 +1,11 @@
 body {
-  background-color: hsla(0, 0%, 13%, 1);
+  background-color: hsla(0, 0%, 13%, 1);  /* charcoal */
   /*background-color: rgba(34, 34, 34, 1);*/
   margin: 0;
 }
 
 .top {
-  background-color: hsla(6, 77%, 50%, 1);
+  background-color: hsla(6, 77%, 50%, 1);  /* red */
   /*background-color: rgba(224, 49, 29, 1);*/
   padding: 40px;
 }
@@ -67,7 +67,7 @@ h1 {
 .reverseLeft-square,
 .reverse-square,
 .reverseRight-square  {
-  fill: hsla(57, 100%, 56%, 1);
+  fill: hsla(57, 100%, 56%, 1);  /* gold */
 }
 
 .button
@@ -79,7 +79,7 @@ h1 {
 .reverseLeft-arrow,
 .reverse-arrow,
 .reverseRight-arrow  {
-  fill: hsla(0, 0%, 13%, 1);
+  fill: hsla(0, 0%, 13%, 1);  /* charcoal */
 }
 
 
