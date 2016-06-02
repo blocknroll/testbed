@@ -39,37 +39,31 @@ socket.on('RX-spinLeft', function () {
 });
 
 socket.on('RX-stop', function () {
+  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
+
   $('.turnLeft-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })    // gold
   $('.turnLeft-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })        // charcoal
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 
   $('.forward-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })     // gold
   $('.forward-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })         // charcoal
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 
   $('.turnRight-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })   // gold
   $('.turnRight-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })       // charcoal
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 
   $('.spinLeft-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })    // gold
   $('.spinLeft-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })        // charcoal
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 
   $('.spinRight-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })   // gold
   $('.spinRight-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })       // charcoal
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 
   $('.reverseLeft-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })  // gold
   $('.reverseLeft-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })      // charcoal
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })   // red
 
   $('.reverse-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })     // gold
   $('.reverse-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })         // charcoal
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })  // red
 
   $('.reverseRight-square').css({ fill: 'hsla(57, 100%, 56%, 1)' })  // gold
   $('.reverseRight-arrow').css({ fill: 'hsla(0, 0%, 13%, 1)' })      // charcoal
-  $('#logo-box').css({ backgroundColor: 'hsla(6, 77%, 50%, 1)' })    // red
 });
 
 socket.on('RX-spinRight', function () {
