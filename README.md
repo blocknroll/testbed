@@ -1,5 +1,7 @@
 # Testa-Rossa-Boxer
 
+![Testa Rossa Boxer](/images/trb.jpg?raw=true)
+
 Testa-Rossa-Boxer is a testbed for JavaScript robotics with web-based remote controls.
 
 It's basically an RC car with a web app for its control transmitter. Or it's a web server that can be driven around the room – whichever you prefer.
