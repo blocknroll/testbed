@@ -5,6 +5,12 @@ const server  = http.createServer(app);
 const io      = require('socket.io')(server);
 const five    = require('johnny-five');
 const board   = new five.Board();
+const airTemp = require('./server/airTemp-2.js')(io);
+// const airTemp = require('./public/js/airTemp-2.js')(io);
+
+
+// const fs      = require('fs');
+// const fileLocation = '/sys/bus/w1/devices/28-0000060416e5/w1_slave';
 motors        = {};
 
 
@@ -50,6 +56,11 @@ board.on('ready', function () {
 
 
 
+
+
+
+
+
 // SOCKETS ////////////////////////////////////////////////////////////////////
 
 io.on('connection', function (socket) {
@@ -58,6 +69,27 @@ io.on('connection', function (socket) {
   socket.on('disconnect', function () {
     console.log('a user disconnected');
   });
+
+
+
+
+  socket.on('temp < 74. Motor off.', function () {
+    stop();
+    // io.emit('RX-off');
+    // io.emit('RX-stop');
+    ledRxOff();
+    console.log('RX-temp < 74. Motor off.');
+  });
+
+  socket.on('Motor-on', function () {
+    forward(255);
+    // io.emit('RX-on');
+    // io.emit('RX-forward');
+    ledRxOn();
+    console.log('RX-temp > 74. Motor should be on!');
+  });
+
+
 
 
   // TOP ROW ////////////////////////////////////
@@ -137,7 +169,39 @@ io.on('connection', function (socket) {
     console.log('RX-reverseRight');
   });
 
+
+
+
+  // function airTempMotorController() {
+  //
+  //     setTimeout(function () {
+  //
+  //       fs.readFile(fileLocation, 'utf8', function (err,data) {
+  //         if (err) throw err;
+  //         matches = data.match(/t=([0-9]+)/);
+  //         var temperatureC = parseInt(matches[1]) / 1000;
+  //         var temperatureF = ((temperatureC * 1.8) + 32).toFixed(3);
+  //         output = '{ "temperature": { "celcius": '+ temperatureC +', "fahrenheit": '+ temperatureF +' } }';
+  //         console.log('Your current temperature is ' + temperatureF + ' degrees F.');
+  //         setTimeout(airTempMotorController, 1000);
+  //
+  //         if (temperatureF < 73.999) {
+  //           console.log('temp < 74. Motor off.');
+  //           socket.emit('TX-stop');
+  //         }
+  //         if (temperatureF > 74) {
+  //           console.log('temp > 74. Motor on!');
+  //           socket.emit('TX-forward');
+  //         }
+  //       });
+  //
+  //     }, 2000);
+  //   }
+  //   airTempMotorController();
+
 });
+
+
 
 
 
@@ -203,8 +267,11 @@ var reverseRight = function (speed) {
 // LED FUNCTIONS – EVENT HANDLERS ///////////////////////////////////////////
 var ledRxOn = function () {
   ledRx.on();
-}
+};
 
 var ledRxOff = function () {
   ledRx.off();
-}
+};
+
+
+module.exports = server;
